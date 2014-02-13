@@ -4,7 +4,7 @@ source 'http://ruby.taobao.org'
 gem 'rails', '4.0.0'
 
 # Use mysql as the database for Active Record
-gem 'mysql2'
+#gem 'mysql2'
 
 gem 'sass-rails', '4.0.1'
 gem 'uglifier', '2.1.1'
@@ -23,7 +23,9 @@ group :doc do
   gem 'sdoc', '0.3.20', require: false
 end
 
-group :development do
+group :development , :test do
+  gem 'mysql2'
+  gem 'rspec-rails', '2.13.1'
   gem 'faker', '1.1.2'
 end
 
